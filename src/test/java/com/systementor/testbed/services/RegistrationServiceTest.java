@@ -73,8 +73,6 @@ public class RegistrationServiceTest {
         var result = service.Register("stefan@systementor.se", "Stefan Holmberg");
 
         //ASSERT
-        String s = "stefan@systementor.se";
-        String s2 = "Stefan Holmberg";
         verify(emailSenderService,times(1)).SendEmail(eq("stefan@systementor.se"), eq("Stefan Holmberg"), anyString() ,anyString());
 
     }
