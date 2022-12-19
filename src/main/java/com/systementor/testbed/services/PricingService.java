@@ -61,7 +61,7 @@ public class PricingService {
     }
 
     private ArrayList<UserAgreementRow> getAgreementRows(String userEmail) {
-        ArrayList<UserAgreementRow> result = new ArrayList<UserAgreementRow>(null);
+        ArrayList<UserAgreementRow> result = new ArrayList<UserAgreementRow>();
         userAgreementRepository.findByEmail(userEmail).forEach(userAgreement ->{
             userAgreementRowRepository.findByAgreementId(userAgreement.getAgreementId()).forEach(userAgreementRow ->{
                 result.add(userAgreementRow);
