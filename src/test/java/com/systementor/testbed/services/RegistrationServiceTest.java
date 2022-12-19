@@ -3,6 +3,7 @@ package com.systementor.testbed.services;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
@@ -72,7 +73,9 @@ public class RegistrationServiceTest {
         var result = service.Register("stefan@systementor.se", "Stefan Holmberg");
 
         //ASSERT
-        verify(emailSenderService,times(1)).SendEmail("stefan@systementor.se", "Stefan Holmberg", anyString() ,anyString());
+        String s = "stefan@systementor.se";
+        String s2 = "Stefan Holmberg";
+        verify(emailSenderService,times(1)).SendEmail(eq("stefan@systementor.se"), eq("Stefan Holmberg"), anyString() ,anyString());
 
     }
 
