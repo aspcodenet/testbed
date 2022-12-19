@@ -16,12 +16,8 @@ public class ProductServiceModel {
         return productName;
     }
 
-    private float percentageDiscount;
-    public float getPercentageDiscount() {
-        return percentageDiscount;
-    }
 
-    private int agreementId;
+
     private float price;
     private String categoryName;
 
@@ -37,18 +33,14 @@ public class ProductServiceModel {
         this.price = price;
     }
 
-    public int getAgreementId() {
-        return agreementId;
-    }
 
-    public ProductServiceModel(int id, String manufacturerName, String productName, String categoryName, float percentageDiscount, int agreementId, float price) {
+
+    public ProductServiceModel(int id, String manufacturerName, String productName, String categoryName, float price) {
         super();
         this.id = id;
         this.manufacturerName = manufacturerName;
         this.productName = productName;
         this.categoryName = categoryName;
-        this.percentageDiscount = percentageDiscount;
-        this.agreementId = agreementId;
         this.price = price;
     }
 }
